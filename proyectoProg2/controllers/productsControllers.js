@@ -1,18 +1,18 @@
 const productsControllers = {
     products: function(req, res){
-    return res.render(index)
+    return res.render('index')
 },
 
 productDetail: function(req, res){
-    return res.render(product)
+    return res.render('product')
 },
 
 productAdd: function(req, res){
-    return res.render(product-add)
+    return res.render('product-add')
 },
 
 search: function(req, res){
-        return res.render(search-results);
+        return res.render('search-results');
 }
 };
 
