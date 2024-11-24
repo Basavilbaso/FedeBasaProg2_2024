@@ -5,7 +5,19 @@ const products = db.Product;
 
 const productsControllers = {
     products: function(req, res){
-    return res.render('index')
+        let filtrado = {
+            include: [
+              {association: "user"}],
+            order:[["createdAt", "DESC"]],
+          };
+
+        products.findAll(filtrado)
+        .then(function(results){
+            return res.render('homePage', {products: results});
+        })
+        .catch(function(e) {
+            return console.log(e);
+        });
 },
 
 productDetail: function(req, res){
