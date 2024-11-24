@@ -1,4 +1,4 @@
-const productsController = {
+const productsControllers = {
     products: function(req, res){
     return res.render(index)
 },
@@ -16,4 +16,4 @@ search: function(req, res){
 }
 };
 
-module.exports = productsController;
+module.exports = productsControllers;

@@ -1,4 +1,4 @@
-const usersController = {
+const usersControllers = {
     showregister: function(req, res){
         return res.render(register);
     },
@@ -9,4 +9,4 @@ const usersController = {
 
 };
 
-module.exports = usersController;
+module.exports = usersControllers;
